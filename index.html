@@ -3,77 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: transparent;
-            height: 60px;
-            overflow: hidden;
-            font-family: sans-serif;
-        }
-
-        #ad-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        /* Loader */
-        .loader {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #00F5FF;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-            position: absolute;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Banner image */
-        #ad-banner {
-            display: none;
-            width: 100%;
-            height: 100%;
-        }
-
-        #ad-banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; background: transparent; height: 60px; overflow: hidden; font-family: sans-serif; }
+        #ad-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; }
+        /* Loading Spinner while Ad loads */
+        .loader { border: 3px solid #f3f3f3; border-top: 3px solid #00F5FF; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; position: absolute; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
-
 <body>
     <div id="ad-container">
-        <!-- Loader -->
         <div class="loader" id="loader"></div>
-
-        <!-- Test Banner -->
-        <a href="https://example.com" target="_blank" id="ad-banner">
-            <img src="https://via.placeholder.com/468x60?text=Test+Banner">
-        </a>
+        
+        <!-- PASTE YOUR REAL ADSTERRA / MONETAG SCRIPT BELOW -->
+        <script type="text/javascript">
+            // Jab ad load ho jaye toh loader hata dein (Optional)
+            window.onload = function() { document.getElementById('loader').style.display = 'none'; };
+        </script>
+        
+        <!-- Example Adsterra/Monetag Script Placeholder -->
+        <script type="text/javascript">
+            // Replace this with your actual code from Adsterra/Monetag
+        </script>
     </div>
-
-    <script>
-        // Simulate ad loading delay (1 second)
-        window.onload = function () {
-            setTimeout(function () {
-                document.getElementById('loader').style.display = 'none';
-                document.getElementById('ad-banner').style.display = 'block';
-            }, 1000);
-        };
-    </script>
 </body>
 </html>
