@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>body { margin:0; padding:0; display:flex; justify-content:center; background:transparent; overflow:hidden; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; background: transparent; height: 60px; overflow: hidden; font-family: sans-serif; }
+        #ad-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; }
+        /* Loading Spinner while Ad loads */
+        .loader { border: 3px solid #f3f3f3; border-top: 3px solid #00F5FF; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; position: absolute; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
 </head>
 <body>
-    <!-- YAHAN APNI ADSTERRA YA MONETAG KI SCRIPT PASTE KAREIN -->
-    <script type="text/javascript">
-        // Aapka code yahan aayega...
-    </script>
+    <div id="ad-container">
+        <div class="loader" id="loader"></div>
+        
+        <www.google.com>
+        <script type="text/javascript">
+            // Jab ad load ho jaye toh loader hata dein (Optional)
+            window.onload = function() { document.getElementById('loader').style.display = 'none'; };
+        </script>
+        
+        <!-- Example Adsterra/Monetag Script Placeholder -->
+        <script type="text/javascript">
+            // Replace this with your actual code from Adsterra/Monetag
+        </script>
+    </div>
 </body>
 </html>
